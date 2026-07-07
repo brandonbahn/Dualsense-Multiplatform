@@ -104,7 +104,9 @@ bool FDualSenseLibrary::Initialize(const FDeviceContext& Context)
 			IPlatformHardwareInfo::Get().Write(DSContext);
 			gc_sync::sleep_ms(50);
 		}
-		DSContext->Output.Feature.VibrationMode = 0xFF;
+		// original
+		// DSContext->Output.Feature.VibrationMode = 0xFF;
+		DSContext->Output.Feature.VibrationMode = 0x0F;
 		DSContext->Output.Feature.FeatureMode = 0x57;
 
 		// Audio haptics bluetooth

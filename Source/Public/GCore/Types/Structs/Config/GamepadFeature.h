@@ -39,7 +39,9 @@ struct FGamepadFeature
 	 * the target hardware and does not cause unintended behavior or excessive
 	 * power consumption.
 	 */
-	std::uint8_t VibrationMode = 0xFF;
+	// ORIGINAL 
+	// std::uint8_t VibrationMode = 0xFF;
+	std::uint8_t VibrationMode = 0x0F;
 	/**
 	 * @brief Adjusts and reduces the intensity of a soft rumble effect.
 	 *
